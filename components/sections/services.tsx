@@ -1,0 +1,100 @@
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+
+const services = [
+  {
+    title: 'Starter Site',
+    desc: 'A beautiful site that clearly explains what you do and helps clients reach out.',
+    bullets: ['1–3 pages', 'Mobile-friendly', 'Contact + CTA setup'],
+    tag: 'Great for new offers',
+  },
+  {
+    title: 'Growth Package',
+    desc: 'More strategy, stronger conversion, and a site built to support consistent client flow.',
+    bullets: ['Up to 6 pages', 'SEO foundations', 'Copy + layout guidance'],
+    tag: 'Most popular',
+    featured: true,
+  },
+  {
+    title: 'Ongoing Support',
+    desc: 'Keep your site fresh with updates, new sections, and small improvements over time.',
+    bullets: ['Monthly updates', 'Performance checks', 'Content tweaks'],
+    tag: 'Peace of mind',
+  },
+];
+
+export function Services() {
+  return (
+    <section id="services" className="py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+            Services
+          </h2>
+          <p className="mt-4 text-lg text-foreground/70">
+            Pick the level of support you need. We’ll keep it simple, and
+            focused on helping the right clients find you.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {services.map(s => (
+            <Card
+              key={s.title}
+              className={[
+                'rounded-2xl',
+                s.featured
+                  ? 'border-emerald-200/70 shadow-sm'
+                  : 'border-foreground/10',
+              ].join(' ')}
+            >
+              <CardHeader>
+                <div className="flex items-start justify-between gap-4">
+                  <CardTitle className="text-xl">{s.title}</CardTitle>
+                  <Badge
+                    className={
+                      s.featured ? 'bg-emerald-100 text-emerald-900' : undefined
+                    }
+                    variant={s.featured ? 'default' : 'secondary'}
+                  >
+                    {s.tag}
+                  </Badge>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70">
+                  {s.desc}
+                </p>
+              </CardHeader>
+
+              <CardContent>
+                <Separator className="mb-6" />
+                <ul className="space-y-3 text-sm text-foreground/80">
+                  {s.bullets.map(b => (
+                    <li key={b} className="flex gap-3">
+                      <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/70" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8">
+                  <Button
+                    variant={s.featured ? 'default' : 'outline'}
+                    className="w-full"
+                    asChild
+                  >
+                    <a href="#contact">Talk about this</a>
+                  </Button>
+                  <p className="mt-3 text-xs text-foreground/60">
+                    Not sure? We’ll choose together on the consult.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
