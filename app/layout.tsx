@@ -26,16 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={notoSerif.className}>
       <body>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        > */}
+        <Navbar />
+        {children}
+        <Footer />
+        {/* </ThemeProvider> */}
         <SpeedInsights />
         <Analytics />
       </body>

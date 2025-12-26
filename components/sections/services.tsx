@@ -6,37 +6,40 @@ import { Separator } from '@/components/ui/separator';
 const services = [
   {
     title: 'Starter Site',
-    desc: 'A beautiful site that clearly explains what you do and helps clients reach out.',
+    desc: 'A clear, welcoming website that helps people understand what you offer and feel comfortable reaching out.',
     bullets: [
-      '1–3 pages (for example: Home, About, Contact)',
-      'Looks great on phones, tablets, and computers',
-      'Clear contact form so clients can reach you',
-      'Basic setup so your site can be found on Google',
-      'Light copy and wording help if you need it',
+      'A simple site with 1–3 pages (Home, About, Contact)',
+      'Easy to read and use on phones, tablets, and computers',
+      'A contact form so potential clients can reach you easily',
+      'An intake form to collect important information before sessions',
+      'Basic setup so people can find you through Google',
+      'Light help refining wording so your message feels clear and natural',
     ],
-    tag: 'Great for new offers',
+    tag: 'Great for getting started',
   },
   {
     title: 'Growth Package',
-    desc: 'More strategy, stronger conversion, and a site built to support consistent client flow.',
+    desc: 'A more complete setup designed to support bookings, reduce back-and-forth, and help your practice grow.',
     bullets: [
-      'Up to 6 pages (Services, FAQs, etc.)',
-      'Everything in the starter package',
-      'Online booking integration (clients can book sessions directly)',
-      'Custom intake form built into your site',
-      'Analytics so you can see how people are finding and using your site',
+      'Everything included in the Starter Site',
+      'A clear services page so clients understand what you offer',
+      'Online booking so clients can schedule sessions themselves',
+      'Automatic booking confirmations so clients know what to expect',
+      'Payment setup so clients can pay online',
+      'A dedicated space for testimonials or client feedback',
     ],
     tag: 'Most popular',
     featured: true,
   },
+
   {
     title: 'Ongoing Support',
-    desc: 'Keep your site fresh with updates, new sections, and small improvements over time.',
+    desc: 'Continued support to keep your site updated, organized, and working smoothly as your practice evolves.',
     bullets: [
-      'Content edits (new services, wording changes, etc.)',
+      'Content updates (new services, wording changes, announcements)',
+      'Help adding new pages, forms, or features as needed',
       'Performance and speed checks',
-      'Help adding new sections or forms as needed',
-      'Continued support as your offerings grow',
+      'Ongoing support as your offerings and business grow',
     ],
     tag: 'Peace of mind',
   },
@@ -103,36 +106,77 @@ export function Services() {
                   >
                     <a href="#contact">Talk about this</a>
                   </Button>
-                  <p className="mt-3 text-xs text-foreground/60">
-                    Not sure? We’ll choose together on the consult.
-                  </p>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
-        {/* Flexibility section */}
-        <div className="mt-10 rounded-2xl border border-foreground/10 bg-foreground/5 p-6 md:p-8">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        {/* Flexibility + “What I can help with” */}
+        <div className="mt-10 space-y-10">
+          {/* Flexibility card */}
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-6 md:p-8">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              <div className="max-w-2xl">
+                <h3 className="text-lg font-semibold tracking-tight">
+                  Not sure which package fits?
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  That’s totally okay. Think of these packages as starting
+                  points. Tell me what you need (or what you’re trying to
+                  improve), and we’ll shape a plan that fits — whether it’s a
+                  simple site, booking + forms, or a few focused upgrades.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button asChild>
+                  <a href="#contact">Book a free consult</a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="#contact">Ask a question</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* soft sage glow */}
+            <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/15 blur-3xl" />
+          </div>
+
+          {/* What I can help with (modern chips + highlight) */}
+          <div>
             <div className="max-w-2xl">
-              <h3 className="text-lg font-semibold tracking-tight">
-                Not sure which package fits?
+              <h3 className="text-2xl font-semibold tracking-tight">
+                What I can help with
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/70">
-                That’s totally okay. Think of these packages as starting points.
-                Tell me what you need (or what you’re trying to improve), and
-                we’ll shape a plan that fits—whether it’s a simple site, booking
-                + forms, or a few focused upgrades.
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Pick what matters most right now — we can start there and build
+                from it.
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild>
-                <a href="#contact">Book a free consult</a>
-              </Button>
-              <Button variant="outline" asChild>
-                <a href="#contact">Ask a question</a>
-              </Button>
+            {/* Chips */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {[
+                'Online booking',
+                'Payments',
+                'Intake forms',
+                'Service menu',
+                'Testimonials',
+                'Google visibility',
+                'Lead capture',
+                'Confirmations & reminders',
+                'Workshops / events',
+                'Packages & bundles',
+                'Email list sign-up',
+                'Updates & ongoing support',
+              ].map(label => (
+                <span
+                  key={label}
+                  className="rounded-full border border-border bg-background/60 px-3 py-1.5 text-sm text-foreground/80 shadow-sm backdrop-blur"
+                >
+                  {label}
+                </span>
+              ))}
             </div>
           </div>
         </div>

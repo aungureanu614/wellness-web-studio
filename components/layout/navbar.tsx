@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
-import { ModeToggle } from '@/components/mode-toggle';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -51,7 +50,6 @@ export function Navbar() {
           >
             Contact
           </a>
-          <ModeToggle />
         </nav>
 
         {/* Mobile dropdown */}
@@ -86,7 +84,6 @@ export function Navbar() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <ModeToggle />
         </div>
       </div>
     </header>
