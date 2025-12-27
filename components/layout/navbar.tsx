@@ -16,7 +16,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b position sticky top-0 z-50 bg-background">
+    <header className="border-b position sticky top-0 z-50 bg-background/70 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Brand */}
         <a href="#" className="flex items-center gap-3">

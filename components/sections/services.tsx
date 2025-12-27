@@ -47,7 +47,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24">
+    <section id="services" className="py-24 bg-warm-bg/50 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
@@ -158,7 +158,7 @@ export function Services() {
             <div className="mt-6 flex flex-wrap gap-2">
               {[
                 'Online booking',
-                'Payments',
+                'Online payment setup',
                 'Intake forms',
                 'Service menu',
                 'Testimonials',

@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 border-t">
+    <section id="contact" className="py-24 border-t bg-warm-bg/50">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           {/* Left: Copy */}
