@@ -45,35 +45,18 @@ export function About() {
               fits what you need right now — and leave room to grow later.
             </p>
 
-            <ul className="mt-8 space-y-3 text-sm text-foreground/80">
-              <li className="flex gap-3">
-                <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/70" />
-                <span>Clear guidance to shape your message and content</span>
+            <ul className="space-y-3 text-sm text-foreground/80 list-disc marker:text-primary/70 ml-4">
+              <li>Clear guidance to shape your message and content</li>
+              <li>Thoughtful design with plenty of breathing room</li>
+              <li>
+                A fast, reliable site that works beautifully on phones, tablets,
+                and computers
               </li>
-              <li className="flex gap-3">
-                <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/70" />
-                <span>Thoughtful design with plenty of breathing room</span>
+              <li>
+                Easy ways for people to contact you, book sessions, and fill out
+                intake forms
               </li>
-              <li className="flex gap-3">
-                <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/70" />
-                <span>
-                  A fast, reliable site that works beautifully on phones,
-                  tablets, and computers
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/70" />
-                <span>
-                  Easy ways for people to contact you, book sessions, and fill
-                  out intake forms
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/70" />
-                <span>
-                  Basic setup so your site can be found through Google
-                </span>
-              </li>
+              <li>Basic setup so your site can be found through Google</li>
             </ul>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

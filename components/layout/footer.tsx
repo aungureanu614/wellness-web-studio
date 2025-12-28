@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import Image from 'next/image';
+import { SiInstagram, SiLinkedin } from 'react-icons/si';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -7,30 +7,29 @@ export function Footer() {
   return (
     <footer className="border-t">
       <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="grid gap-10 md:grid-cols-2">
-          {/* Brand */}
-          <div>
-            <p className="text-base font-semibold">Wellness Web Studio</p>
-            <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-              Modern websites for wellness professionals—built with care,
-              clarity, and a little breathing room.
+        {/* Top row */}
+        <div className="grid gap-10 md:grid-cols-2 md:items-start">
+          {/* Brand (left) */}
+          <div className="flex items-center gap-3">
+            <Image
+              src="/wellness_web_studio_logo.png"
+              alt="Wellness Web Studio Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10"
+              priority
+            />
+            <p className="text-base font-semibold leading-none">
+              Wellness Web Studio
             </p>
-
-            <div className="mt-6 flex gap-3">
-              <Button size="sm" asChild>
-                <a href="#contact">Book a free consult</a>
-              </Button>
-              <Button size="sm" variant="outline" asChild>
-                <a href="#services">Services</a>
-              </Button>
-            </div>
           </div>
 
-          {/* Contact */}
-          <div>
+          {/* Contact (right) */}
+          <div className="md:text-right">
             <p className="text-sm font-medium text-foreground/80">
               Get in touch
             </p>
+
             <p className="mt-4 text-sm text-foreground/70">
               Email:{' '}
               <a
@@ -42,35 +41,37 @@ export function Footer() {
             </p>
 
             <p className="mt-3 text-sm text-foreground/70">
-              Based in California · Working remotely
+              Based in California, USA
             </p>
 
-            <div className="mt-6 rounded-2xl border border-foreground/10 p-4">
-              <p className="text-sm font-medium">Quick note</p>
-              <p className="mt-2 text-sm text-foreground/70">
-                If you’re not sure what you need yet, that’s totally okay. We’ll
-                figure it out together on a short consult.
-              </p>
+            {/* Social icons */}
+            <div className="mt-4 flex items-center gap-4 md:justify-end">
+              <a
+                href="https://instagram.com/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-foreground/60"
+              >
+                <SiInstagram className="h-5 w-5" />
+              </a>
+
+              <a
+                href="https://linkedin.com/in/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-chart-3"
+              >
+                <SiLinkedin className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>
 
-        <Separator className="my-10" />
-
-        <div className="flex flex-col gap-3 text-sm text-foreground/60 md:flex-row md:items-center md:justify-between">
+        {/* Bottom row */}
+        <div className="mt-10 flex flex-col gap-2 border-t pt-6 text-sm text-foreground/60 md:flex-row md:items-center md:justify-between">
           <p>© {year} Wellness Web Studio. All rights reserved.</p>
-          <div className="flex gap-6">
-            {/* Swap these for real links later */}
-            <a className="hover:text-foreground" href="#">
-              Instagram
-            </a>
-            <a className="hover:text-foreground" href="#">
-              LinkedIn
-            </a>
-            <a className="hover:text-foreground" href="#">
-              Privacy
-            </a>
-          </div>
         </div>
       </div>
     </footer>

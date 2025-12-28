@@ -4,12 +4,11 @@ import Image from 'next/image';
 export function Hero() {
   return (
     <section className="border-b bg-clay">
-      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
+      <div className="mx-auto max-w-6xl px-3 py-14 md:py-10">
         <div className="grid overflow-hidden rounded-3xl border border-border md:grid-cols-2">
           {/* Left panel */}
-          <div className="relative p-10 md:p-14 bg-[var(--warm-bg)]">
+          <div className="relative p-10 md:p-14 bg-warm-bg">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_30%_20%,color-mix(in_oklch,var(--mist)_55%,transparent),transparent_60%)]" />
-
             <div className="relative">
               <h1 className="mt-4 text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
                 <span className="block">Modern websites</span>
@@ -56,7 +55,6 @@ export function Hero() {
                   className="h-auto w-full rounded-2xl object-cover shadow-xl ring-1 ring-white/10"
                   priority
                 />
-
                 <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[28px] bg-black/20 blur-2xl" />
               </div>
             </div>
