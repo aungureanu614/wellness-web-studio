@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export function Hero() {
   return (
-    <section className="border-b bg-clay">
-      <div className="mx-auto max-w-6xl px-3 py-14 md:py-10">
+    <section>
+      <div className="mx-auto max-w-6xl py-14 md:py-10">
         <div className="grid overflow-hidden rounded-3xl border border-border md:grid-cols-2">
           {/* Left panel */}
           <div className="relative p-10 md:p-14 bg-warm-bg">

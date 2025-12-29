@@ -47,7 +47,7 @@ const services = [
 export function Services() {
   return (
     <section id="services">
-      <div className="mx-auto max-w-6xl px-3 py-14 md:py-10">
+      <div className="mx-auto max-w-6xl py-14 md:py-10">
         {/* Hero-style box wrapper */}
         <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--warm-bg)]">
           {/* Radial glow overlay */}

@@ -16,74 +16,92 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b position sticky top-0 z-50 bg-background/70 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        {/* Brand */}
-        <a href="#" className="flex items-center gap-3">
-          <Image
-            src="/wellness_web_studio_logo.png"
-            alt="Wellness Web Studio Logo"
-            width={40}
-            height={40}
-            className="h-10 w-10"
-            priority
-          />
-          <span className="font-semibold tracking-tight text-sm sm:text-base">
-            Wellness Web Studio
-          </span>
-        </a>
+    <header className="sticky top-0 z-50">
+      {/* This wrapper keeps alignment consistent with the hero container */}
+      <div>
+        <div
+          className={[
+            // surface
+            'rounded-b-xl',
+            'bg-[var(--sage)]/55 backdrop-blur-md',
+            'border border-border/60',
+            'shadow-[0_10px_30px_-20px_rgba(0,0,0,0.25)]',
+            // subtle “blend” tint so it relates to the page palette
+            'supports-[backdrop-filter]:bg-[var(--sage)]/25',
+          ].join(' ')}
+        >
+          <div className="flex items-center justify-between px-5 py-3 sm:px-6 sm:py-4">
+            {/* Brand */}
+            <a href="#" className="flex items-center gap-3">
+              <div className="rounded-full bg-white/60 p-1 shadow-sm ring-1 ring-border/60">
+                <Image
+                  src="/wellness_web_studio_logo.png"
+                  alt="Wellness Web Studio Logo"
+                  width={36}
+                  height={36}
+                  className="h-9 w-9"
+                  priority
+                />
+              </div>
+              <span className="text-sm font-semibold tracking-tight sm:text-base">
+                Wellness Web Studio
+              </span>
+            </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          <a
-            className="text-foreground/70 hover:text-foreground"
-            href="#services"
-          >
-            Services
-          </a>
-          <a className="text-foreground/70 hover:text-foreground" href="#about">
-            About
-          </a>
-          <a
-            className="text-foreground/70 hover:text-foreground"
-            href="#contact"
-          >
-            Contact
-          </a>
-        </nav>
+            {/* Desktop nav */}
+            <nav className="hidden items-center gap-2 md:flex">
+              {[
+                { label: 'Services', href: '#services' },
+                { label: 'About', href: '#about' },
+                { label: 'Contact', href: '#contact' },
+              ].map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-full px-4 py-2 text-sm text-foreground/70 transition hover:bg-foreground/5 hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
 
-        {/* Mobile dropdown */}
-        <div className="md:hidden flex items-center gap-2">
-          <DropdownMenu open={open} onOpenChange={setOpen}>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                size="icon"
-                aria-label="Open menu"
-                className="rounded-xl"
-              >
-                <Menu className="h-5 w-5" />
-              </Button>
-            </DropdownMenuTrigger>
+            {/* Mobile dropdown */}
+            <div className="md:hidden">
+              <DropdownMenu open={open} onOpenChange={setOpen}>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    aria-label="Open menu"
+                    className="h-10 w-10 rounded-2xl bg-background/60 shadow-sm backdrop-blur"
+                  >
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </DropdownMenuTrigger>
 
-            <DropdownMenuContent align="end" className="w-44">
-              <DropdownMenuItem asChild>
-                <a href="#services" onClick={() => setOpen(false)}>
-                  Services
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href="#about" onClick={() => setOpen(false)}>
-                  About
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href="#contact" onClick={() => setOpen(false)}>
-                  Contact
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+                <DropdownMenuContent
+                  align="end"
+                  className="w-44 rounded-2xl bg-background/80 backdrop-blur-md"
+                >
+                  <DropdownMenuItem asChild>
+                    <a href="#services" onClick={() => setOpen(false)}>
+                      Services
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#about" onClick={() => setOpen(false)}>
+                      About
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#contact" onClick={() => setOpen(false)}>
+                      Contact
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </div>
         </div>
       </div>
     </header>
