@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 export function Contact() {
   return (
     <section id="contact">
-      <div className="mx-auto max-w-6xl py-14 md:py-10">
+      <div className="mx-auto max-w-6xl py-5">
         {/* Hero-style box wrapper */}
         <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--warm-bg)]">
           {/* Radial glow overlay */}
