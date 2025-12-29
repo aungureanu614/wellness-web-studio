@@ -6,7 +6,7 @@ export function About() {
     <section id="about">
       <div className="mx-auto max-w-6xl py-14 md:py-10">
         {/* Hero-style box wrapper */}
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--warm-bg)]">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--eucalyptus)]">
           {/* Radial glow overlay */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_70%_20%,color-mix(in_oklch,var(--primary)_35%,transparent),transparent_60%),radial-gradient(1400px_circle_at_20%_80%,color-mix(in_oklch,var(--mist)_45%,transparent),transparent_50%)]" />
 
@@ -28,28 +28,28 @@ export function About() {
 
               {/* Copy */}
               <div>
-                <p className="text-sm font-medium text-foreground/70">
+                <p className="text-sm font-medium text-foreground/70 text-white">
                   A little about me
                 </p>
 
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl text-white">
                   I build websites that help the right people find you — and
                   feel comfortable reaching out.
                 </h2>
 
-                <p className="mt-6 text-lg leading-relaxed text-foreground/70">
+                <p className="mt-6 text-lg leading-relaxed text-foreground/70 text-white">
                   I work with wellness coaches and practitioners who want a
                   website that feels grounded, clear, and welcoming.
                 </p>
 
-                <p className="mt-4 text-foreground/70 leading-relaxed">
+                <p className="mt-4 text-foreground/70 leading-relaxed text-white">
                   My approach is simple: we start by getting clear on what you
                   do and who you want to help, then build a site that reflects
                   your work, looks beautiful on every device, and makes it easy
                   for people to take the next step.
                 </p>
 
-                <p className="mt-4 text-foreground/70 leading-relaxed">
+                <p className="mt-4 text-foreground/70 leading-relaxed text-white">
                   Whether you&apos;re just getting started, ready to grow, or
                   want ongoing support as your business evolves, we&apos;ll
                   choose a path that fits what you need right now — and leave
@@ -85,7 +85,7 @@ export function About() {
                   </Button>
                 </div>
 
-                <p className="mt-5 text-sm text-foreground/60">
+                <p className="mt-5 text-sm text-foreground/60 text-white">
                   Want to keep it simple? We can start with a small site and
                   grow from there.
                 </p>

@@ -9,7 +9,7 @@ export function Contact() {
     <section id="contact">
       <div className="mx-auto max-w-6xl py-14 md:py-10">
         {/* Hero-style box wrapper */}
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--eucalyptus)]">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--warm-bg)]">
           {/* Radial glow overlay */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_20%_20%,color-mix(in_oklch,var(--sage)_30%,transparent),transparent_60%),radial-gradient(1400px_circle_at_80%_80%,color-mix(in_oklch,var(--clay)_25%,transparent),transparent_50%)]" />
 
@@ -18,20 +18,18 @@ export function Contact() {
             <div className="grid gap-12 md:grid-cols-2 md:items-start">
               {/* Left: Copy */}
               <div>
-                <h2 className="text-3xl font-semibold tracking-tight md:text-4xl text-white">
+                <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
                   Let&apos;s talk about your site
                 </h2>
-                <p className="mt-4 text-lg text-white/80 leading-relaxed">
+                <p className="mt-4 text-lg leading-relaxed">
                   Tell me a little about what you do and what you&apos;d love
                   your website to help with. I&apos;ll reply with next steps and
                   a few options.
                 </p>
 
-                <div className="mt-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
-                  <p className="text-sm font-medium text-white">
-                    What happens next
-                  </p>
-                  <ol className="mt-4 space-y-3 text-sm text-white/80">
+                <div className="mt-8 rounded-2xl border border-white/20 bg-[var(--eucalyptus)]/20 backdrop-blur p-6">
+                  <p className="text-sm font-medium ">What happens next</p>
+                  <ol className="mt-4 space-y-3 text-sm">
                     <li className="flex gap-3">
                       <span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--sage)]" />
                       <span>We schedule a quick, no-pressure call.</span>
@@ -46,10 +44,10 @@ export function Contact() {
                     </li>
                   </ol>
 
-                  <p className="mt-6 text-sm text-white/70">
+                  <p className="mt-6 text-sm">
                     Prefer email?{' '}
                     <a
-                      className="underline underline-offset-4 text-white hover:text-white/80"
+                      className="underline underline-offset-4"
                       href="mailto:hello@wellnesswebstudio.com"
                     >
                       hello@wellnesswebstudio.com
