@@ -3,77 +3,96 @@ import Image from 'next/image';
 
 export function About() {
   return (
-    <section id="about" className="py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          {/* Visual */}
-          <Image
-            src="/about_section_img.png"
-            alt="Example wellness website layouts across devices"
-            width={500}
-            height={500}
-            className="h-auto border rounded-2xl object-cover mx-auto"
-            priority
-          />
+    <section id="about">
+      <div className="mx-auto max-w-6xl py-14 md:py-10">
+        {/* Hero-style box wrapper */}
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--warm-bg)]">
+          {/* Radial glow overlay */}
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_70%_20%,color-mix(in_oklch,var(--primary)_35%,transparent),transparent_60%),radial-gradient(1400px_circle_at_20%_80%,color-mix(in_oklch,var(--mist)_45%,transparent),transparent_50%)]" />
 
-          {/* Copy */}
-          <div>
-            <p className="text-sm font-medium text-foreground/70">
-              A little about me
-            </p>
+          {/* Content */}
+          <div className="relative p-8 md:p-12">
+            <div className="grid gap-12 md:grid-cols-2 md:items-center">
+              {/* Visual */}
+              <div className="relative">
+                <Image
+                  src="/about_section_img.png"
+                  alt="Example wellness website layouts across devices"
+                  width={500}
+                  height={500}
+                  className="h-auto w-full rounded-2xl object-cover shadow-xl ring-1 ring-white/10"
+                  priority
+                />
+                <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[28px] bg-black/20 blur-2xl" />
+              </div>
 
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-              I build websites that help the right people find you — and feel
-              comfortable reaching out.
-            </h2>
+              {/* Copy */}
+              <div>
+                <p className="text-sm font-medium text-foreground/70">
+                  A little about me
+                </p>
 
-            <p className="mt-6 text-lg leading-relaxed text-foreground/70">
-              I work with wellness coaches and practitioners who want a website
-              that feels grounded, clear, and welcoming.
-            </p>
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
+                  I build websites that help the right people find you — and
+                  feel comfortable reaching out.
+                </h2>
 
-            <p className="mt-4 text-foreground/70 leading-relaxed">
-              My approach is simple: we start by getting clear on what you do
-              and who you want to help, then build a site that reflects your
-              work, looks beautiful on every device, and makes it easy for
-              people to take the next step.
-            </p>
+                <p className="mt-6 text-lg leading-relaxed text-foreground/70">
+                  I work with wellness coaches and practitioners who want a
+                  website that feels grounded, clear, and welcoming.
+                </p>
 
-            <p className="mt-4 text-foreground/70 leading-relaxed">
-              Whether you’re just getting started, ready to grow, or want
-              ongoing support as your business evolves, we’ll choose a path that
-              fits what you need right now — and leave room to grow later.
-            </p>
+                <p className="mt-4 text-foreground/70 leading-relaxed">
+                  My approach is simple: we start by getting clear on what you
+                  do and who you want to help, then build a site that reflects
+                  your work, looks beautiful on every device, and makes it easy
+                  for people to take the next step.
+                </p>
 
-            <ul className="space-y-3 text-sm text-foreground/80 list-disc marker:text-primary/70 ml-4">
-              <li>Clear guidance to shape your message and content</li>
-              <li>Thoughtful design with plenty of breathing room</li>
-              <li>
-                A fast, reliable site that works beautifully on phones, tablets,
-                and computers
-              </li>
-              <li>
-                Easy ways for people to contact you, book sessions, and fill out
-                intake forms
-              </li>
-              <li>Basic setup so your site can be found through Google</li>
-            </ul>
+                <p className="mt-4 text-foreground/70 leading-relaxed">
+                  Whether you&apos;re just getting started, ready to grow, or
+                  want ongoing support as your business evolves, we&apos;ll
+                  choose a path that fits what you need right now — and leave
+                  room to grow later.
+                </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild>
-                <a href="#contact">Work with me</a>
-              </Button>
+                <div className="mt-8 rounded-2xl border border-foreground/10 bg-card/80 backdrop-blur p-6">
+                  <p className="text-sm font-medium mb-4">What you get</p>
+                  <ul className="space-y-3 text-sm text-foreground/80 list-disc marker:text-primary/70 ml-4">
+                    <li>Clear guidance to shape your message and content</li>
+                    <li>Thoughtful design with plenty of breathing room</li>
+                    <li>
+                      A fast, reliable site that works beautifully on phones,
+                      tablets, and computers
+                    </li>
+                    <li>
+                      Easy ways for people to contact you, book sessions, and
+                      fill out intake forms
+                    </li>
+                    <li>
+                      Basic setup so your site can be found through Google
+                    </li>
+                  </ul>
+                </div>
 
-              <Button variant="outline" asChild>
-                <a href="#services">See services</a>
-              </Button>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Button asChild>
+                    <a href="#contact">Work with me</a>
+                  </Button>
+
+                  <Button variant="outline" asChild>
+                    <a href="#services">See services</a>
+                  </Button>
+                </div>
+
+                <p className="mt-5 text-sm text-foreground/60">
+                  Want to keep it simple? We can start with a small site and
+                  grow from there.
+                </p>
+              </div>
             </div>
-
-            <p className="mt-4 text-sm text-foreground/60">
-              Want to keep it simple? We can start with a small site and grow
-              from there.
-            </p>
           </div>
+          {/* end content */}
         </div>
       </div>
     </section>
