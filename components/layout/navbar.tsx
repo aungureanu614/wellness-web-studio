@@ -22,12 +22,11 @@ export function Navbar() {
         <div
           className={[
             // surface
-            'rounded-b-xl',
             'bg-[var(--sage)]/55 backdrop-blur-md',
             'border border-border/60',
             'shadow-[0_10px_30px_-20px_rgba(0,0,0,0.25)]',
             // subtle “blend” tint so it relates to the page palette
-            'supports-[backdrop-filter]:bg-[var(--sage)]/25',
+            'supports-[backdrop-filter]:bg-[var(--sage)]/45',
           ].join(' ')}
         >
           <div className="flex items-center justify-between px-5 py-3 sm:px-6 sm:py-4">
@@ -66,8 +65,8 @@ export function Navbar() {
             </nav>
 
             {/* Mobile dropdown */}
-            <div className="md:hidden">
-              <DropdownMenu open={open} onOpenChange={setOpen}>
+            <nav className="md:hidden">
+              <DropdownMenu open={open} onOpenChange={() => setOpen(!open)}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
@@ -84,23 +83,17 @@ export function Navbar() {
                   className="w-44 rounded-2xl bg-background/80 backdrop-blur-md"
                 >
                   <DropdownMenuItem asChild>
-                    <a href="#services" onClick={() => setOpen(false)}>
-                      Services
-                    </a>
+                    <a href="#services">Services</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <a href="#about" onClick={() => setOpen(false)}>
-                      About
-                    </a>
+                    <a href="#about">About</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <a href="#contact" onClick={() => setOpen(false)}>
-                      Contact
-                    </a>
+                    <a href="#contact">Contact</a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-            </div>
+            </nav>
           </div>
         </div>
       </div>

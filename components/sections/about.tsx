@@ -8,7 +8,7 @@ export function About() {
         {/* Hero-style box wrapper */}
         <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--eucalyptus)]">
           {/* Radial glow overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_70%_20%,color-mix(in_oklch,var(--primary)_35%,transparent),transparent_60%),radial-gradient(1400px_circle_at_20%_80%,color-mix(in_oklch,var(--mist)_45%,transparent),transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_40%,color-mix(in_oklch,var(--primary)_80%,transparent),transparent_100%),radial-gradient(1400px_circle_at_20%_80%,color-mix(in_oklch,var(--mist)_80%,transparent),transparent_100%)]" />
 
           {/* Content */}
           <div className="relative p-8 md:p-12">
@@ -52,8 +52,7 @@ export function About() {
                 <p className="mt-4 text-foreground/70 leading-relaxed text-white">
                   Whether you&apos;re just getting started, ready to grow, or
                   want ongoing support as your business evolves, we&apos;ll
-                  choose a path that fits what you need right now — and leave
-                  room to grow later.
+                  choose a path that fits what you need right now.
                 </p>
 
                 <div className="mt-8 rounded-2xl border border-foreground/10 bg-card/80 backdrop-blur p-6">

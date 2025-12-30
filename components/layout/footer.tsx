@@ -5,7 +5,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--sage)]/25">
+    <footer className="bg-[var(--sage)]/45">
       <div className="mx-auto max-w-6xl px-6 py-8">
         {/* Main row */}
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
