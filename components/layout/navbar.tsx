@@ -2,19 +2,17 @@
 
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
-import { useState } from 'react';
 
-import { Button } from '@/components/ui/button';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
 
 export function Navbar() {
-  const [open, setOpen] = useState(false);
-
   return (
     <header className="sticky top-0 z-50">
       {/* This wrapper keeps alignment consistent with the hero container */}
@@ -25,7 +23,7 @@ export function Navbar() {
             'bg-[var(--sage)]/55 backdrop-blur-md',
             'border border-border/60',
             'shadow-[0_10px_30px_-20px_rgba(0,0,0,0.25)]',
-            // subtle “blend” tint so it relates to the page palette
+            // subtle "blend" tint so it relates to the page palette
             'supports-[backdrop-filter]:bg-[var(--sage)]/45',
           ].join(' ')}
         >
@@ -64,35 +62,18 @@ export function Navbar() {
               ))}
             </nav>
 
-            {/* Mobile dropdown */}
+            {/* Mobile navigation using NavigationMenu */}
             <nav className="md:hidden">
-              <DropdownMenu open={open} onOpenChange={() => setOpen(!open)}>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    aria-label="Open menu"
-                    className="h-10 w-10 rounded-2xl bg-background/60 shadow-sm backdrop-blur"
-                  >
-                    <Menu className="h-5 w-5" />
-                  </Button>
-                </DropdownMenuTrigger>
-
-                <DropdownMenuContent
-                  align="end"
-                  className="w-44 rounded-2xl bg-background/80 backdrop-blur-md"
-                >
-                  <DropdownMenuItem asChild>
-                    <a href="#services">Services</a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="#about">About</a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="#contact">Contact</a>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="h-10 w-10 rounded-2xl bg-background/60 shadow-sm backdrop-blur p-0">
+                      <Menu className="h-5 w-5" />
+                    </NavigationMenuTrigger>
+                    {/* TODO: implement mobile nav */}
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </nav>
           </div>
         </div>
