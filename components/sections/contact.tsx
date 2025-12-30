@@ -9,9 +9,9 @@ export function Contact() {
     <section id="contact">
       <div className="mx-auto max-w-6xl py-5">
         {/* Hero-style box wrapper */}
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-[var(--warm-bg)]">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-warm-bg">
           {/* Radial glow overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_20%_20%,color-mix(in_oklch,var(--sage)_30%,transparent),transparent_60%),radial-gradient(1400px_circle_at_80%_80%,color-mix(in_oklch,var(--clay)_25%,transparent),transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_80%_80%,color-mix(in_oklch,var(--mist)_55%,transparent),transparent_60%)]" />
 
           {/* Content */}
           <div className="relative p-8 md:p-12">
