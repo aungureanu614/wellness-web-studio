@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { SiInstagram, SiLinkedin } from 'react-icons/si';
+import { LogoImage } from '../logo-image';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -10,24 +11,14 @@ export function Footer() {
         {/* Main row */}
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           {/* Brand */}
-          <div className="flex items-center gap-3">
-            <div className="rounded-full bg-[var(--eucalyptus)] p-1 shadow-sm ring-1 ring-border/60 h-12 w-12">
-              <Image
-                src="/wellness_web_studio_logo.png"
-                alt="Wellness Web Studio Logo"
-                width={40}
-                height={40}
-                className="h-10 w-10 rounded-full object-cover"
-                priority
-              />
-            </div>
-
-            <div className="leading-tight">
-              <p className="text-sm font-semibold">Wellness Web Studio</p>
-              <p className="text-xs text-foreground/60">
-                Modern websites for wellness professionals
-              </p>
-            </div>
+          <div className="flex-col gap-3">
+            <LogoImage
+              src="/wellness_web_studio_logo.png"
+              alt="Wellness Web Studio Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-cover"
+            />
           </div>
 
           {/* Contact + social */}
