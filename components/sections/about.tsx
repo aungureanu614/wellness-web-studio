@@ -45,8 +45,10 @@ export function About() {
                   Many wellness websites look polished but feel manufactured,
                   confusing to navigate, or hard to book from. My role is to
                   translate your work into a digital experience that feels
-                  grounded, intuitive, and respectful of both you and your
-                  clients.
+                  grounded, intuitive, and respectful—built on modern,
+                  lightweight hosting that allows for flexibility and longevity
+                  without the boxed-in feel of templates or unnecessary monthly
+                  costs.
                 </p>
 
                 <p className="mt-4 text-foreground/70 leading-relaxed text-white">

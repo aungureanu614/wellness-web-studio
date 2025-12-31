@@ -6,6 +6,8 @@ import { Separator } from '@/components/ui/separator';
 const services = [
   {
     title: 'Starter Site',
+    price: 'Starting at $1,500',
+    priceNote: 'One-time project',
     desc: 'A clear, welcoming website that helps people understand what you offer and feel comfortable reaching out.',
     bullets: [
       'A simple site with 1–3 pages (ex: Home, About, Contact)',
@@ -18,6 +20,8 @@ const services = [
   },
   {
     title: 'Growth Package',
+    price: 'Starting at $3,000',
+    priceNote: 'One-time project',
     desc: 'A more complete setup designed to support bookings, reduce back-and-forth, and help your practice grow.',
     bullets: [
       'Everything included in the Starter Site',
@@ -33,6 +37,8 @@ const services = [
   },
   {
     title: 'Ongoing Support',
+    price: 'Starting at $150/month',
+    priceNote: 'Flexible, month-to-month',
     desc: 'Continued support to keep your site updated, organized, and working smoothly as your practice evolves.',
     bullets: [
       'Content updates (new services, wording changes, announcements)',
@@ -90,6 +96,17 @@ export function Services() {
                       >
                         {s.tag}
                       </Badge>
+                    </div>
+                    {/* Pricing */}
+                    <div className="mt-2">
+                      <p className="text-sm font-medium text-foreground">
+                        {s.price}
+                      </p>
+                      {s.priceNote && (
+                        <p className="text-xs text-muted-foreground">
+                          {s.priceNote}
+                        </p>
+                      )}
                     </div>
                     <p className="mt-3 text-sm leading-relaxed text-foreground/70">
                       {s.desc}
