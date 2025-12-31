@@ -8,14 +8,13 @@ const services = [
     title: 'Starter Site',
     desc: 'A clear, welcoming website that helps people understand what you offer and feel comfortable reaching out.',
     bullets: [
-      'A simple site with 1–3 pages (Home, About, Contact)',
+      'A simple site with 1–3 pages (ex: Home, About, Contact)',
       'Easy to read and use on phones, tablets, and computers',
       'A contact form so potential clients can reach you easily',
-      'An intake form to collect important information before sessions',
       'Basic setup so people can find you through Google',
       'Light help refining wording so your message feels clear and natural',
     ],
-    tag: 'Great for getting started',
+    tag: 'Getting started',
   },
   {
     title: 'Growth Package',
@@ -27,6 +26,7 @@ const services = [
       'Automatic booking confirmations so clients know what to expect',
       'Payment setup so clients can pay online',
       'A dedicated space for testimonials or client feedback',
+      'An intake form to collect important information before sessions',
     ],
     tag: 'Most popular',
     featured: true,
@@ -40,7 +40,7 @@ const services = [
       'Performance and speed checks',
       'Ongoing support as your offerings and business grow',
     ],
-    tag: 'Peace of mind',
+    tag: 'Support',
   },
 ];
 
@@ -83,7 +83,7 @@ export function Services() {
                       <Badge
                         className={
                           s.featured
-                            ? 'bg-primary text-foreground'
+                            ? 'bg-primary text-white'
                             : 'bg-background text-foreground'
                         }
                         variant={s.featured ? 'default' : 'secondary'}
@@ -109,7 +109,7 @@ export function Services() {
                     <div className="mt-8">
                       <Button
                         variant={s.featured ? 'default' : 'outline'}
-                        className="w-full"
+                        className={`${s.featured ? 'text-white' : 'text-foreground'} w-full`}
                         asChild
                       >
                         <a href="#contact">Talk about this</a>
@@ -137,7 +137,7 @@ export function Services() {
                   </div>
 
                   <div className="flex flex-col gap-3 sm:flex-row">
-                    <Button asChild>
+                    <Button asChild className="text-white">
                       <a href="#contact">Book a free consult</a>
                     </Button>
                     <Button variant="outline" asChild>

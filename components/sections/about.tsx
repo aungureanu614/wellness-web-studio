@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 export function About() {
@@ -33,40 +32,45 @@ export function About() {
                 </p>
 
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl text-white">
-                  I build websites that help the right people find you — and
-                  feel comfortable reaching out.
+                  I build websites that feel intuitive, and easy to say yes to.
                 </h2>
 
-                <p className="mt-6 text-lg leading-relaxed text-foreground/70 text-white">
-                  I work with wellness coaches and practitioners who want a
-                  website that feels grounded, clear, and welcoming.
+                <p className="mt-4 text-foreground/70 leading-relaxed text-white">
+                  I work with wellness coaches and practitioners whose work is
+                  relational, and deeply human—and who want an online presence
+                  that reflects that.
                 </p>
 
                 <p className="mt-4 text-foreground/70 leading-relaxed text-white">
-                  My approach is simple: we start by getting clear on what you
-                  do and who you want to help, then build a site that reflects
-                  your work, looks beautiful on every device, and makes it easy
-                  for people to take the next step.
+                  Many wellness websites look polished but feel manufactured,
+                  confusing to navigate, or hard to book from. My role is to
+                  translate your work into a digital experience that feels
+                  grounded, intuitive, and respectful of both you and your
+                  clients.
                 </p>
 
                 <p className="mt-4 text-foreground/70 leading-relaxed text-white">
-                  Whether you&apos;re just getting started, ready to grow, or
-                  want ongoing support as your business evolves, we&apos;ll
-                  choose a path that fits what you need right now.
+                  We start by getting clear on what you do and who you want to
+                  help, then build a site that reflects your values, works
+                  beautifully on every device, and gently guides people toward
+                  the next step—without popups, pressure, or urgency tactics.
                 </p>
 
                 <div className="mt-8 rounded-2xl border border-foreground/10 bg-card/80 backdrop-blur p-6">
                   <p className="text-sm font-medium mb-4">What you get</p>
                   <ul className="space-y-3 text-sm text-foreground/80 list-disc marker:text-primary/70 ml-4">
-                    <li>Clear guidance to shape your message and content</li>
+                    <li>
+                      Clear, grounded messaging that helps people understand
+                      your value
+                    </li>
                     <li>Thoughtful design with plenty of breathing room</li>
                     <li>
                       A fast, reliable site that works beautifully on phones,
                       tablets, and computers
                     </li>
                     <li>
-                      Easy ways for people to contact you, book sessions, and
-                      fill out intake forms
+                      Simple ways for people to contact you, book sessions, and
+                      receive clear confirmation
                     </li>
                     <li>
                       Basic setup so your site can be found through Google
@@ -74,19 +78,9 @@ export function About() {
                   </ul>
                 </div>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild>
-                    <a href="#contact">Work with me</a>
-                  </Button>
-
-                  <Button variant="outline" asChild>
-                    <a href="#services">See services</a>
-                  </Button>
-                </div>
-
                 <p className="mt-5 text-sm text-foreground/60 text-white">
-                  Want to keep it simple? We can start with a small site and
-                  grow from there.
+                  No pressure—just a quick chat, a clear recommendation, and
+                  space to decide.
                 </p>
               </div>
             </div>

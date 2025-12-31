@@ -32,7 +32,7 @@ export function Contact() {
                   <ol className="mt-4 space-y-3 text-sm">
                     <li className="flex gap-3">
                       <span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--sage)]" />
-                      <span>We schedule a quick, no-pressure call.</span>
+                      <span>We schedule a quick, free, no-pressure call.</span>
                     </li>
                     <li className="flex gap-3">
                       <span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--sage)]" />
@@ -101,17 +101,20 @@ export function Contact() {
                       <Textarea
                         id="message"
                         placeholder="A short note is perfect—what do you do, and what do you want your website to help with?"
-                        rows={5}
+                        className="h-32 py-3 resize-none !field-sizing-fixed max-w-full overflow-wrap-anywhere"
                       />
                     </div>
 
-                    <Button type="submit" className="w-full">
+                    <Button
+                      type="submit"
+                      className="w-full text-white cursor-pointer"
+                    >
                       Send message
                     </Button>
 
                     <p className="text-xs text-foreground/60">
                       By sending, you&apos;re okay with me contacting you back
-                      about this request. No spam—ever.
+                      about this request. No spam ever!
                     </p>
                   </form>
                 </CardContent>
