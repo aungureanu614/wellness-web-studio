@@ -153,11 +153,9 @@ export function Services() {
                     </p>
                   </div>
 
-                  <div className="flex flex-col gap-3 sm:flex-row">
-                    <Button asChild className="text-white">
-                      <a href="#contact">Get in touch</a>
-                    </Button>
-                  </div>
+                  <Button asChild className="text-white md:w-50">
+                    <a href="#contact">Get in touch</a>
+                  </Button>
                 </div>
 
                 {/* soft sage glow */}
