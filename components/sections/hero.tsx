@@ -27,7 +27,7 @@ export function Hero() {
               </h1>
 
               <p className="mt-6 text-lg leading-relaxed text-foreground/70 max-w-xl">
-                I help coaches and practitioners turn their work into a warm,
+                I help wellness practitioners turn their work into a warm,
                 trustworthy online presence—so the right clients feel confident
                 reaching out.
               </p>
