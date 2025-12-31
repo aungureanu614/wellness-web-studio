@@ -146,7 +146,7 @@ export function Services() {
                     <h3 className="text-lg font-semibold tracking-tight">
                       Not sure which package fits?
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground max-w-[550px]">
                       That’s totally okay. Think of these packages as starting
                       points. Tell me what you need (or what you’re trying to
                       improve), and we’ll shape a plan that fits.
@@ -155,10 +155,7 @@ export function Services() {
 
                   <div className="flex flex-col gap-3 sm:flex-row">
                     <Button asChild className="text-white">
-                      <a href="#contact">Book a free consult</a>
-                    </Button>
-                    <Button variant="outline" asChild>
-                      <a href="#contact">Ask a question</a>
+                      <a href="#contact">Get in touch</a>
                     </Button>
                   </div>
                 </div>
