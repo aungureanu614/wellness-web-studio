@@ -11,11 +11,19 @@ export function Hero() {
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_circle_at_30%_20%,color-mix(in_oklch,var(--mist)_55%,transparent),transparent_60%)]" />
             <div className="relative">
               <h1 className="mt-4 text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-                <span className="block">Modern websites</span>
-                <span className="block">for wellness</span>
                 <span className="block">
-                  professionals<span className="text-primary">.</span>
+                  <span className="inline bg-gradient-to-r from-[var(--eucalyptus)] to-[var(--sage)] text-transparent bg-clip-text">
+                    Modern
+                  </span>{' '}
+                  websites
                 </span>
+                <span className="block">
+                  for{' '}
+                  <span className="inline bg-gradient-to-r from-[var(--clay)] to-[var(--blush)] text-transparent bg-clip-text">
+                    wellness
+                  </span>
+                </span>
+                <span className="block">professionals.</span>
               </h1>
 
               <p className="mt-6 text-lg leading-relaxed text-foreground/70 max-w-xl">

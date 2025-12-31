@@ -44,6 +44,13 @@ export function Contact() {
                     </li>
                   </ol>
 
+                  <div className="my-6 text-sm">
+                    {' '}
+                    <Button asChild className="text-white">
+                      <a href="#contact">Book a free consult</a>
+                    </Button>
+                  </div>
+
                   <p className="mt-6 text-sm">
                     Prefer email?{' '}
                     <a
@@ -53,12 +60,6 @@ export function Contact() {
                       hello@wellnesswebstudio.com
                     </a>
                   </p>
-                  <div className="my-6 text-sm">
-                    {' '}
-                    <Button asChild className="text-white">
-                      <a href="#contact">Book a free consult</a>
-                    </Button>
-                  </div>
                 </div>
               </div>
 
