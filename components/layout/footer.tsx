@@ -11,13 +11,13 @@ export function Footer() {
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <div className="rounded-full border border-border bg-background/60 p-1 shadow-sm">
+            <div className="rounded-full bg-[var(--eucalyptus)] p-1 shadow-sm ring-1 ring-border/60 h-12 w-12">
               <Image
                 src="/wellness_web_studio_logo.png"
                 alt="Wellness Web Studio Logo"
-                width={36}
-                height={36}
-                className="h-9 w-9"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-cover"
                 priority
               />
             </div>
